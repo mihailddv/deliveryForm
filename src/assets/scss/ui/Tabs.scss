@@ -1,0 +1,30 @@
+@import '../component.scss';
+
+.container {
+  width: 100%;
+}
+
+.content {
+  background: #fff;
+  padding: 32px;
+}
+
+.caption {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  padding: 20px 30px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #8288a2;
+  background: #edeeef;
+  font-weight: 500;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.active {
+  background: #fff;
+}

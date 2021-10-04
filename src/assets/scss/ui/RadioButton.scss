@@ -1,0 +1,63 @@
+@import '../component.scss';
+
+.radio {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #dadef0;
+  transition: .3s;
+
+  &:after {
+    @include pseudo;
+
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%);
+    background: $primary-color;
+    border-radius: 50%;
+  }
+}
+
+.text {
+  transition: .3s;
+  flex: 1;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    .text {
+      color: $primary-color;
+    }
+
+    .radio {
+      border-color: $primary-color;
+    }
+  }
+}
+
+.input {
+  display: none;
+
+  &:checked {
+    &~.radio {
+      border-color: $primary-color;
+
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
